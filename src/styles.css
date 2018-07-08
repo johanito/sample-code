@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    padding-top: 80px;
+    background-image: linear-gradient(120deg, #F2F2F2 0%, #DBDBDB 100%);
+}
+#details {
+    float: left;
+    margin-top: 10px;
+}
+
+input,
+.navbar  {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+  }
+
+.navbar {
+    box-sizing: border-box;
+    opacity: 0.7;
+}
+
+table {
+    /* border-collapse: collapse; */
+    /* width: 100%; */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+/* th, td {
+    text-align: left;
+    padding: 50%;
+    width: 10%;
+    height: 10%;
+} */
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #17b4e1;
+    color: white;
+}
+

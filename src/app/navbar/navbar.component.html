@@ -1,0 +1,21 @@
+<!-- JB 25-03-18 Responsive and Collapsible NavBar -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" role="navigation" *ngIf="isLoggedIn">
+  <a class="navbar-brand" routerLink="dashboard" *ngIf="isLoggedIn"></a>
+
+<button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsibleNavBar"  aria-expanded="true" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapsibleNavBar">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavBar" [ngbCollapse]="isCollapsed">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" *ngIf="admin$ | async as admin">Logged in as: {{ admin.email }}<span class="sr-only">(current)</span></a>
+      </li>
+          <li class="nav-item active">
+          <a (click)="logout()" class="nav-link" *ngIf="isLoggedIn"href="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
